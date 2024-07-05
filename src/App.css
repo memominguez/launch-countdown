@@ -1,0 +1,229 @@
+.container {
+  width: 375px;
+  height: 667px;
+  margin-inline: auto;
+  background-color: var(--very-dark-blue);
+  background-image: url("/bg-stars.svg");
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.title {
+  margin-top: 142px;
+  margin-bottom: 54px;
+  width: 80%;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  color: #ffffff;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.countdown {
+  width: 327px;
+  height: 92px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.date-picker {
+  position: absolute;
+  top: 58%;
+  z-index: 10;
+  width: 375px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.date-picker p {
+  color: var(--grayish-blue);
+}
+
+.socials {
+  position: absolute;
+  top: 90%;
+  z-index: 10;
+  width: 136px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social-icon {
+  cursor: pointer;
+}
+
+.social-icon:hover path {
+  fill: #fb5e84;
+}
+
+.sticky-footer {
+  position: sticky;
+  top: 100%;
+  margin-bottom: -10px;
+}
+
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+    height: 800px;
+  }
+
+  .title {
+    margin-top: 120px;
+    font-size: 22px;
+  }
+
+  .countdown {
+    width: 688px;
+    height: 184px;
+  }
+
+  .date-picker {
+    top: 52%;
+    width: 400px;
+  }
+}
+
+/* *************** Card **************** */
+.card-container {
+  position: relative;
+  width: 70px;
+  height: 92px;
+}
+
+.flipcard__background {
+  position: absolute;
+  width: 70px;
+  height: 71px;
+  background-color: var(--very-dark);
+  z-index: 1;
+}
+
+.flipcard {
+  position: absolute;
+  width: 70px;
+  height: 66px;
+  border-radius: 6px;
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+  background-color: var(--dark-desaturated-blue);
+  cursor: pointer;
+}
+
+.divider {
+  width: 70px;
+  height: 0.5px;
+  background-color: var(--very-dark);
+  position: absolute;
+  top: 33px;
+}
+
+.cut-left {
+  width: 3px;
+  height: 6px;
+  position: absolute;
+  left: 0;
+  top: 30.3px;
+  background-color: var(--very-dark);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.cut-right {
+  width: 3px;
+  height: 6px;
+  position: absolute;
+  right: 0;
+  top: 30.3px;
+  background-color: var(--very-dark);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.flipcard__front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  color: var(--soft-red);
+  backface-visibility: hidden;
+}
+
+.flipcard__back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  color: var(--soft-red);
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+}
+
+.card-footer {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 3px;
+  font-size: 8px;
+  color: var(--grayish-blue);
+  letter-spacing: 2px;
+}
+
+@media screen and (min-width: 1440px) {
+  .card-container {
+    width: 148px;
+    height: 184px;
+  }
+  .flipcard__background {
+    width: 148px;
+    height: 150px;
+  }
+  .flipcard {
+    width: 148px;
+    height: 140px;
+    border-radius: 8px;
+  }
+  .divider {
+    width: 148px;
+    top: 70px;
+  }
+  .cut-left {
+    width: 6px;
+    height: 12px;
+    top: 65px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  .cut-right {
+    width: 6px;
+    height: 12px;
+    top: 65px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+  .flipcard__front {
+    font-size: 80px;
+  }
+  .flipcard__back {
+    font-size: 80px;
+  }
+  .card-footer {
+    font-size: 14px;
+  }
+}
