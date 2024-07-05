@@ -39,8 +39,10 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: Pending
-- Live Site URL: Pending
+
+- Solution URL:  [Github repository](https://github.com/memominguez/launch-countdown)
+- Live Site URL:  [Netlify](https://countdown-flipping.netlify.app)
+
 
 ## My process
 
